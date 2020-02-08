@@ -43,10 +43,14 @@
 <code>应付债券(Bond payable)</code>  
 <code>长期应付款(Long term payable)：比如要租房子，长期租，一年一年付，这种每年付的款就可以叫做此</code>  
 * 股东权益(Shareholders'equity)  
+*从外面拿进来的*  
+<code>股本(Capital stock)：具有非常重要的法律意义的一个概念</code>  
+<code>资本公积</code>  
 
+*里面留下来的*    
+<code>盈余公积(Surplus reserve):法律不让分配的利润(在中国有了盈利之后 必须留10%的利润做盈余公积)</code>  
+<code>未分配利润(Retalned earnings)</code>  
 
-
-### 负债和股东权益
 ### 利润表  
 
 ### 现金流量表  
