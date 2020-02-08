@@ -24,24 +24,24 @@
 <code>应收账款(Accounts receivable): 卖产品产生的收账 - 客户应该给的钱</code>  
 <code>其他应收款(Other receivable): 非卖产品产生的收账 - 具有中国特色的条目</code>   
 <code>预付账款(Prepaid accounts): 给供应商提前付的款 - 向供应商收货的权利</code>  
-<code>存货(Inventory)</code>
+<code>存货(Inventory)</code>  
 <code>待摊费用(Deferred expenses): 最初是一批资产，随着企业经营，随着时间的流逝，逐渐的变成了费用 - 资产可以通过时间变成费用（比如预付租金，预付广告费）</code>  
 <code>其他资产(Others)</code>  
 *非流动资产(Non Current assets):经过若干个循环变成现金的XX*  
-<code>长期投资(Long-term investment)</code>
-<code>固定资产(Fixed asset):时间长，价值高</code>
-<code>无形资产(Intangible assets and other assets):专利权、专有技术、版权、商标权、土地使用权（中国特殊有）</code>
+<code>长期投资(Long-term investment)</code>  
+<code>固定资产(Fixed asset):时间长，价值高</code>  
+<code>无形资产(Intangible assets and other assets):专利权、专有技术、版权、商标权、土地使用权（中国特殊有）</code>   
 
 * 负债(Liability)  
 *流动负债（Current liabilities）：一年内要支付的负债*  
 <code>短期借款(Short-term borrowing)：一年以内偿还的贷款</code>  
-<code>应付账款(Accounts payable)</code>
-<code>预收账款(Deposit received)</code>
+<code>应付账款(Accounts payable)</code>  
+<code>预收账款(Deposit received)</code>  
 <code>其他负债(Other liabilities)：应付工资、应交税金等</code>  
 *长期负债：一年之后要支付的负债*
 <code>长期借款(Long-term borrowing)：一年以后需要偿还的贷款</code>  
 <code>应付债券(Bond payable)</code>  
-<code>长期应付款(Long term payable)：比如要租房子，长期租，一年一年付，这种每年付的款就可以叫做此</code>
+<code>长期应付款(Long term payable)：比如要租房子，长期租，一年一年付，这种每年付的款就可以叫做此</code>  
 * 股东权益(Shareholders'equity)  
 
 
