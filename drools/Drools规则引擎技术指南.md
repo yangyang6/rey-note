@@ -20,7 +20,7 @@
     $p:Person(age==15)
 </code>  
 
-## 第一章 基础篇  
+## 第二章 基础篇  
 一套完整的规则文件内容如下：  
 
 关键字 | 描述  
@@ -45,9 +45,28 @@ soundsLike用来检查单词是否具有与给定值几乎相同的声音
 Object(fieldName str[startsWith|endsWith|length] "String"|1)  
 
 
-**集合的处理**:  
+**集合的处理**：  
 条件中  $s:Person(classNameList[1]=="xxx")  
 结论中  单个读取$s.getClassNameList().get(1) 或者循环读取$1.getClassNameList().iterator().next()  
+
+**12个规则属性**：  
+activation-group、agenda-group、auto-focus、date-effective、date-expires、dialet、duration、enalbled、lock-on-active、no-loop、ruleflow-group、salience  
+**no-loop**  
+默认值：false  
+属性说明：防止死循环，当规则通过update之类的函数修改了Fact对象时，可能使规则再次被激活，从而导致死循环。将no-loop设置为true的目的是避免当前那规则then部分被修改后的事实再次被激活，从而防止死循环发生。  
+*tips*  
+在一个规则文件中，一个Fact对象通过Drools函数被修改，规则体将再次激活。也就是说，在RHS部分使用了update相类似的语法(insert同理)，变更了Fact对象在规则中的内容，就会导致规则重新被激活和匹配。  
+
+**ruleflow-group**  
+**lock-on-active**  
+默认值：false  
+属性说明：一个更强大的解决死循环的属性，即无论如何更新规则事实对象，当前规则也只能被触发一次。  
+
+**salience**  
+默认值：0  
+属性说明：规则体被执行的顺序。可以是负数，其值越大，执行顺序越高，排名越靠前。    
+
+
 
 
 
