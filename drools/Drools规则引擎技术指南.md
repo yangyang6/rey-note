@@ -90,7 +90,12 @@ System.setProperty("drools.dateformat","yyyy-MM-dd");
 
 **duration**  
 **activation-group**  
-属性说明：激活分组，通过字符串定义分组名称，具有相同名称的规则体有且只有一个规则被激活，其他规则体的LHS部分仍然为true也不会再被执行。
+属性说明：激活分组，通过字符串定义分组名称，具有相同名称的规则体有且只有一个规则被激活，其他规则体的LHS部分仍然为true也不会再被执行。  
+activation-group属性类似于规则流程中的XOR网关，当有规则体被执行完毕后，其他规则将不会被激活，即使其他规则中的LHS部分为true。  
+
+**agenda-group**  
+属性说明：agenda-group是议程分组，属于另一种可控的规则执行方式，是指用户可以通过配置agenda-group的参数来控制规则的执行，而且只有获取焦点的规则才会被激活。  
+
 
 
 
