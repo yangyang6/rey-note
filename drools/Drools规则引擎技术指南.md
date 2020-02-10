@@ -64,7 +64,25 @@ activation-group、agenda-group、auto-focus、date-effective、date-expires、d
 
 **salience**  
 默认值：0  
-属性说明：规则体被执行的顺序。可以是负数，其值越大，执行顺序越高，排名越靠前。    
+属性说明：规则体被执行的顺序。可以是负数，其值越大，执行顺序越高，排名越靠前。Drools还支持动态配置优秀级  
+<code>
+rule "isSalience4"salience (Math.random() * 10 + 1)  
+when  
+then  
+    System.out.println("isSalience4");  
+end  
+</code>  
+
+**enabled**  
+默认值：true  
+属性说明：指规则是否可以执行，若规则体设置为enabled false，则规则体将视为永久不被激活  
+
+**date-effective**  
+属性说明：只有当期那系统时间大于等于设置的时间或日期，规则才会被激活。可接受的日期格式为"dd-MMM-yyyy"  
+**date-expires**  
+与上面的属性相反
+
+
 
 
 
