@@ -80,7 +80,17 @@ end
 **date-effective**  
 属性说明：只有当期那系统时间大于等于设置的时间或日期，规则才会被激活。可接受的日期格式为"dd-MMM-yyyy"  
 **date-expires**  
-与上面的属性相反
+与上面的属性相反，Drools规则引擎日期属性格式为dd-MMM-yyyy是并不常用的格式，在开发的过程中，一般都会写成yyyy-MM-dd形式。如果在
+规则中使用通俗的Java日期格式，需要在Java调用规则中添加代码  
+<code>
+System.setProperty("drools.dateformat","yyyy-MM-dd");  
+</code>  
+使用日期格式化注意，需要在创建会话之前执行该代码，也就是在实例kieSession之前  
+
+
+**duration**  
+**activation-group**  
+属性说明：激活分组，通过字符串定义分组名称，具有相同名称的规则体有且只有一个规则被激活，其他规则体的LHS部分仍然为true也不会再被执行。
 
 
 
