@@ -95,6 +95,19 @@ activation-group属性类似于规则流程中的XOR网关，当有规则体被�
 
 **agenda-group**  
 属性说明：agenda-group是议程分组，属于另一种可控的规则执行方式，是指用户可以通过配置agenda-group的参数来控制规则的执行，而且只有获取焦点的规则才会被激活。  
+**auto-focus**  
+默认值：false  
+***timer*  
+属性说明：timer属性是一个定时器，用来控制规则的执行时间  
+
+
+## 第三章 中级篇  
+**global**  
+global全局变量与Fact(事实)对象不同，不会因为值变化而影响到规则的再次激活  
+**function**  
+感觉可以把function看作java中的静态方法理解  
+**declare**  
+declare声明在规则引擎中的功能主要有两个：一是声明新类型，二是声明元数据类型  
 
 
 
