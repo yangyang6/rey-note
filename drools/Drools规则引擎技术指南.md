@@ -7,7 +7,7 @@
 **RHS**是编写满足条件后处理结果的    
 **drools的Rete算法**是drools的核心算法  
 **Fact对象**：Fact是指在Drools规则应用中（是指规则因子），JavaBean插入Working、Memory中变成Fact之后，Fact对象不是原来的JavaBean对象进行克隆。而是原来JavaBean对象的引用  
-
+**drl文件内容的单行注释不要用"#"号**  
 
 
 * 对象引用  
@@ -108,6 +108,12 @@ global全局变量与Fact(事实)对象不同，不会因为值变化而影响�
 感觉可以把function看作java中的静态方法理解  
 **declare**  
 declare声明在规则引擎中的功能主要有两个：一是声明新类型，二是声明元数据类型  
+declare可以声明实体之间的继承关系  
+**when**  
+条件元素eval尽可能少点用，导致引擎的性能问题  
+条件元素not与exists一个代表不存在，另一个代表存在，两者也可以搭配使用  
+<code>not (exist Person())</code>  
+from关键词
 
 
 
