@@ -10,3 +10,17 @@
 
 
 
+#### 例子：
+
+busybox镜像，作为测试镜像，输出"hello world"
+
+<code>docker run busybox echo "hello world"</code>
+
+<code>docker run <image>:<tag></code>
+
+Docker项目通过“容器镜像”，解决了应用打包这个根本性难题
+
+容器其实是一种沙盒技术，沙盒就是能够像集装箱一样，把你的“应用”“装”起来的技术。
+
+由于容器是寄宿在宿主机上面的，所以很多容器操作我们要是去考虑的，在生产环境中，没有人敢把运行在物理机上的Linux容器直接暴露在公网上。
+
