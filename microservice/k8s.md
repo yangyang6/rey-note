@@ -1,4 +1,100 @@
 ### 基操
 
-查看k8s集群信息：
+查看deployment的信息
+
+<code>kubectl get deploy --namespace=default</code>
+
+
+
+删除默认命名空间的里面的deployment
+
+<code>kubectl delete deploy nginx-deployment --namespace=default</code>
+
+
+
+查看存在的工作空间(Namespace)
+
+<code>kubectl get ns</code>
+
+
+
+kube-system是k8s项目预留的系统pod的工作空间(Namespace)
+
+<code>kubectl get pods -n kube-system</code>
+
+![image-20200722163727779](/Users/yangli/Library/Application Support/typora-user-images/image-20200722163727779.png)
+
+新手小白很多时候不懂怎么定位，之前pod一直启动报pending，找了很多资料才是网络组件没有安装，部署了网络组件就可以了：
+
+<code>kubectl apply -f https://git.io/weave-kube-1.6</code>
+
+
+
+我这里部署了一个单台master的k8s环境，由于默认情况下Master节点是不允许运行用户的pod的，k8s通过Taint/Toleration机制
+
+![image-20200722170554715](/Users/yangli/Library/Application Support/typora-user-images/image-20200722170554715.png)
+
+
+
+
+
+k8s对现有的容器进行水平扩展：
+
+![image-20200722171644175](/Users/yangli/Library/Application Support/typora-user-images/image-20200722171644175.png)
+
+![image-20200722171707880](/Users/yangli/Library/Application Support/typora-user-images/image-20200722171707880.png)
+
+<code>kubectl scale deployment nginx-deployment --replicas=2</code>
+
+水平扩展后：
+
+![image-20200722171730081](/Users/yangli/Library/Application Support/typora-user-images/image-20200722171730081.png)
+
+
+
+
+
+查看历史版本
+
+<code>kubectl rollout history deployment/nginx-deployment</code>
+
+
+
+运行一个
+
+<code>kubectl run -i --tty --image busybox:1.28.4 dns-test --restart=Never --rm /bin/sh</code>
+
+
+
+# StatefulSet
+
+StatefulSete的核心功能就是通过某种方式记录这些状态，然后在Pod被重新创建时，能够为新的的Pod恢复这些状态
+
+
+
+![image-20200722204144456](/Users/yangli/Library/Application Support/typora-user-images/image-20200722204144456.png)
+
+Headless Service不需要分配一个VIP，而是可以直接以DNS记录的方式解析出被代理Pod的IP地址，当你按照这样的方式创建了一个Headless Service之后，它所代理的所有Pod的IP地址，都会被绑定一个这样格式的DNS记录，如下所示：
+
+<code><pod-name>.<svc-name>.<namespace>.svc.cluster.local</code>
+
+
+
+### 存储状态
+
+k8s项目引入一组叫做PVC和PV的API对象，大大降低了用户声明和使用持久化volumn的门槛
+
+PVC和PV的设计实际上类似于“接口”和“实现”的思想
+
+
+
+### 总结
+
+StatefulSet的控制器直接管理的是Pod
+
+其次，k8s通过Headless Service为这些有编号的Pod，在DNS服务器中生成带有同样编号的DNS记录
+
+最后，StatefulSet还为每一个Pod分配并创建一个同样编号的PVC
+
+
 
