@@ -84,7 +84,9 @@ Headless Service不需要分配一个VIP，而是可以直接以DNS记录的方�
 
 k8s项目引入一组叫做PVC和PV的API对象，大大降低了用户声明和使用持久化volumn的门槛
 
-PVC和PV的设计实际上类似于“接口”和“实现”的思想
+PVC和PV的设计实际上类似于“接口”和“实现”的思想，PVC提供了对某种持久化存储的描述，但不提供具体的实现；而这个持久化存储的实现部分则由PV负责完成。k8s里面有一个专门维护持久化存储的控制器（Volumn Controller），它维护者多个控制循环，其中有个循环就是撮合PVC和PV之间的角色，它叫做PersistentVolumeController
+
+k8s为我们提供了可以自动创建PV的机制，即Dynamic Provisioning，而它的核心在于一个名为StorageClass的API对象
 
 
 
@@ -97,4 +99,28 @@ StatefulSet的控制器直接管理的是Pod
 最后，StatefulSet还为每一个Pod分配并创建一个同样编号的PVC
 
 
+
+
+
+# 声明式API
+
+一个API对象在Etcd里的完整资源路径，是由Group（API组）、Version（API版本）、Resource（API资源类型）三个部分组成
+
+具体的树形结构：
+
+<img src="/Users/yangli/Library/Application Support/typora-user-images/image-20201112113900434.png" alt="image-20201112113900434" style="zoom:50%;margin-left:0px" />
+
+
+
+
+
+# RBAC 角色控制
+
+### Role：角色
+
+### Subject：被作用者
+
+### RoleBinding：绑定了被作用者与角色之间的关系
+
+在k8s中已经内置了很多为系统保留的clusterRole，可以通过kubetcl get clusterroles查看
 

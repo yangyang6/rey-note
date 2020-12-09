@@ -24,3 +24,24 @@ Docker项目通过“容器镜像”，解决了应用打包这个根本性难�
 
 由于容器是寄宿在宿主机上面的，所以很多容器操作我们要是去考虑的，在生产环境中，没有人敢把运行在物理机上的Linux容器直接暴露在公网上。
 
+
+
+### 网络
+
+作为一个容器，它可以声明直接使用宿主机的网络栈（-net=host），即：不开启network namespace
+
+```dockerfile
+docker run -d -net=host --name nginx-host nginx
+```
+
+容器启动后，直接监听的就是宿主机的80端口
+
+容器网络关系图：
+
+<img src="https://static001.geekbang.org/resource/image/e0/66/e0d28e0371f93af619e91a86eda99a66.png" alt="img" style="zoom:30%;margin-left:-1px" />
+
+
+
+覆盖网络关系图：
+
+<img src="https://static001.geekbang.org/resource/image/b4/3d/b4387a992352109398a66d1dbe6e413d.png" alt="img" style="zoom:33%;margin-left:-1px" />
