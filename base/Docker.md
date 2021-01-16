@@ -16,3 +16,9 @@ docker start containerID
 
 
 
+查看错误日志
+
+```dockerfile
+docker logs -f --tail 2000  api-operation-app |grep "employee/login"
+```
+
