@@ -14,3 +14,32 @@
 
 
 
+
+
+
+
+
+
+### 常见的数据结构
+
+* String
+* Hash Tables
+* Linked Lists
+* Sets
+* Sorted Sets
+
+* bitmap：适用于海量数据的计算。特点是速度快，占用空间小
+
+  1.可用于签到
+
+  ​	SETBIT key offset value（设置或者清空key的value【字符串】在offset处的bit值【只能是0或1】）
+
+  ​	如：
+
+  ​		SETBIT 2018#yh 1 1
+
+  ​		SETBIT 2018#yh 2 1
+
+  ​	统计：
+
+  ​		BITCOUNT 2018#yh

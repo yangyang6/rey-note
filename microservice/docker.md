@@ -57,3 +57,36 @@ docker run -d -net=host --name nginx-host nginx
 覆盖网络关系图：
 
 <img src="https://static001.geekbang.org/resource/image/b4/3d/b4387a992352109398a66d1dbe6e413d.png" alt="img" style="zoom:33%;margin-left:-1px" />
+
+
+
+
+
+日常运维
+
+### 日志查看
+
+docker Exited 后 重启
+
+```dockerfile
+docker start containerID 
+```
+
+
+
+查看错误日志
+
+```dockerfile
+docker logs -f --tail 2000  api-operation-app |grep "employee/login"
+```
+
+
+
+查看一段时期里面的日志
+
+```dockerfile
+docker logs --since 2021-01-18T10:48:00 --until 2021-01-18T10:49:00 service-profile
+```
+
+
+

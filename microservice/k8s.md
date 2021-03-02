@@ -66,6 +66,31 @@ k8s对现有的容器进行水平扩展：
 
 
 
+
+
+# Service
+
+k8s 之所以需要service：
+
+* pod的ip是不固定的
+* 一组pod会有负载均衡的需求
+
+
+
+Iptables -> IPVS （“将重要操作放到内核态”是提高性能的重要手段）
+
+ClusterIP模式的Service为你提供就是一个Pod的稳定IP地址，即VIP，并且这里Pod和Service关系是可以过Label确定的
+
+Headless Service为你提供的则是一个Pod的稳定的DNS名字，并且这个名字是可以通过Pod名字和Service名字拼接起来的
+
+
+
+在使用k8s的service，如何从外部（k8s集群之外），访问到k8s里创建service？
+
+SNAT操作？
+
+当然k8s能够为service分配共有IP地址，externalIPs
+
 # StatefulSet
 
 StatefulSete的核心功能就是通过某种方式记录这些状态，然后在Pod被重新创建时，能够为新的的Pod恢复这些状态
@@ -124,3 +149,36 @@ StatefulSet的控制器直接管理的是Pod
 
 在k8s中已经内置了很多为系统保留的clusterRole，可以通过kubetcl get clusterroles查看
 
+
+
+# Ingress
+
+全局的、为了代理不同后端service而设置的负载均衡服务
+
+
+
+感觉类似于nginx的功能
+
+
+
+
+
+# NetworkPolicy
+
+定义网络策略，入口与出口
+
+
+
+
+
+# 	资源调度
+
+在k8s中，cpu这种资源是“可压缩资源”，当可压缩资源不足时，Pod只会“饥饿”，不会退出
+
+内存这样的资源，是“不可压缩资源”，当不可压缩资源不足时，Pod就会因为OOM被内核杀掉
+
+500m的设置是指500millicpu，也就是指0.5个CPU
+
+
+
+建议将DaemonSet的Pod都设置为Guaranteed的Qos类型
