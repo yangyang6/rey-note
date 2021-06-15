@@ -90,3 +90,21 @@ docker logs --since 2021-01-18T10:48:00 --until 2021-01-18T10:49:00 service-prof
 
 
 
+查看日志，连续根据条件查找
+
+```dockerfile
+docker logs service-finance | grep "处理订单作废:订单作废消息"|grep "202103231653334144"
+```
+
+
+
+database:
+
+​	shm_size:1gb
+
+更新pg数据库配置后重启数据库（会适配最新的配置）
+
+```dockerfile
+docker-compose -f docker-compose.yml  up -d
+```
+
