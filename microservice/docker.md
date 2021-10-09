@@ -64,6 +64,16 @@ docker run -d -net=host --name nginx-host nginx
 
 日常运维
 
+
+
+### 进入容器
+
+```dockerfile
+docker run -it mysql:5.7 /bin/bash
+```
+
+
+
 ### 日志查看
 
 docker Exited 后 重启

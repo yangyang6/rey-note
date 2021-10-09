@@ -140,3 +140,11 @@ ThreadLocal对象通常用于防止对可变的单实例变量（Singleton）或
 
 CountDownLautch就是闭锁的一种实现
 
+
+
+>通常，中断是实现取消的最合理方式
+
+Thread.currentThread().isInterrupted()
+
+
+

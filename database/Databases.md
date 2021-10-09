@@ -10,6 +10,14 @@ brew services start mongodb-community@4.4
 
 # Mysql
 
+一条sql语句的生命周期
+
+<img src="https://static001.geekbang.org/resource/image/0d/d9/0d2070e8f84c4801adbfa03bda1f98d9.png?" alt="img" style="zoom:40%;margin-left:-10px;" />
+
+
+
+
+
 更新语句
 
 redo log（server引擎持有的日志 - 物理日志）、binlog（归档日志，Server层的日志 - 逻辑日志）
@@ -26,9 +34,8 @@ MyIsam不支持事务
 
 
 
+当数据库有多个事务同时执行的时候，就可能出现脏读
+
 对事务的理解，区分<strong>读未提交</strong>与<strong>读提交</strong>这两个主要是在事务未提交/提交时  它所做的事儿能不能被其他事务看到
 
 串行化指读、写都加锁
-
-
-
