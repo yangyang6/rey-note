@@ -62,9 +62,7 @@ docker run -d -net=host --name nginx-host nginx
 
 
 
-日常运维
-
-
+# 日常运维
 
 ### 进入容器
 
@@ -117,4 +115,14 @@ database:
 ```dockerfile
 docker-compose -f docker-compose.yml  up -d
 ```
+
+
+
+
+
+
+
+docker-compose -f docker-compose-pay.yml down
+
+docker-compose -f docker-compose.yml up -d
 
