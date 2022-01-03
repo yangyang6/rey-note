@@ -120,9 +120,12 @@ docker-compose -f docker-compose.yml  up -d
 
 
 
-
-
+```
 docker-compose -f docker-compose-pay.yml down
 
 docker-compose -f docker-compose.yml up -d
+```
 
+
+
+uKrx?#5z0B

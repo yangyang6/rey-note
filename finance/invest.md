@@ -35,3 +35,24 @@ https://www.bilibili.com/video/BV1t54y1t7Hc
 中：8%承受范围
 
 长：20%-30%承受范围，要求最高，对企业有深刻的认识
+
+
+
+
+
+《价值》这本书
+
+![image-20211123145012084](/Users/yangli/Library/Application Support/typora-user-images/image-20211123145012084.png)
+
+
+
+
+
+
+
+股市赚大钱三种人的话不能听：
+
+* 经济学家
+* 专家
+* 大家的话
+
