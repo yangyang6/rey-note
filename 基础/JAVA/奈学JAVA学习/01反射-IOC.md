@@ -4,3 +4,21 @@
 
 注：IOC容器大家可以简单认为是一种KV的Map集合
 
+
+
+AbstractApplicationContext -> BeanFactory getBean()  -> AbstractBeanFactory doGetBean()
+
+![image-20220110010611304](/Users/yangli/Library/Application Support/typora-user-images/image-20220110010611304.png)
+
+
+
+手写IOC的实现
+
+
+
+
+
+DI依赖注入：
+
+* 构造器注入
+* Setter方法注入
