@@ -34,3 +34,33 @@
 
 
 
+
+
+<img src="/Users/yangli/Library/Application Support/typora-user-images/image-20220305110834897.png" alt="image-20220305110834897" style="zoom:50%;margin-left:-1px" />
+
+
+
+对象与堆
+
+<img src="/Users/yangli/Library/Application Support/typora-user-images/image-20220305114034476.png" alt="image-20220305114034476" style="zoom:50%;margin-left:-1px" />
+
+Eden  -> S0 -> S1 -> Old
+
+
+
+
+
+### 如何选择垃圾收集器
+
+<img src="/Users/yangli/Library/Application Support/typora-user-images/image-20220307105053787.png" alt="image-20220307105053787" style="zoom:50%;margin-left:-1px" />
+
+
+
+jmap：
+
+Jstat：查看GC的状态
+
+jstack：查看这个进程里面的线程状态  jstack 1212
+
+
+
