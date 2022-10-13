@@ -1,0 +1,1 @@
+Numpy的主要目标是处理数组，而Pandas的主要数据结构为pandas.Series、pandas.DataFrame和pandas.Panel
