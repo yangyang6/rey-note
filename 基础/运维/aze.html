@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aze</title>
+    <script src="https://unpkg.com/vue@3.2.24/dist/vue.global.prod.js"></script>
+    <script>
+        function getValue(){
+            var dvValue = document.getElementById("dv");
+       var dtValue = document.getElementById("dt");
+       var rsValue = document.getElementById("rs");
+       var vValue = document.getElementById("v");
+
+       var di = dvValue.value / rsValue.value / 1000;
+       console.log(di);
+       document.getElementById("di").innerText = di;
+       document.getElementById("di").style.color = "red";
+
+       var didt = di / dtValue.value;
+       document.getElementById("didt").innerText = didt;
+       document.getElementById("didt").style.color = "red";
+
+       var l1 = vValue.value / didt;
+       document.getElementById("l1").innerText = rounded(l1,2);
+       document.getElementById("l1").style.color = "red";
+
+       var l2 = l1 / 1000;
+       document.getElementById("l2").innerText = rounded(l2,2);
+       document.getElementById("l2").style.color = "red";
+
+       var l3 = l2 / 1000;
+       document.getElementById("l3").innerText = rounded(l3,2);
+       document.getElementById("l3").style.color = "red";
+
+        }
+
+
+
+        /**
+ * 四舍五入
+ * @param {数字} num 
+ * @param {保留小数位数} i 
+ * @returns 
+ */
+ function rounded(num, i) {
+    var total2 = 0;
+    var yn = String(num).indexOf(".") + 1; //获取小数点的位置
+    if (yn > 1) {
+        var s = num + "";
+        var str = s.substring(0, s.indexOf(".") + (i + 1));
+        if (yn >= i) {
+
+
+        //    var y = str.replace(".", "");
+            var n = s.substring(s.indexOf(".") + (i + 1), s.indexOf(".") + (i + 2));
+            if (n >= 5) {               
+
+                var n = s.substring(s.indexOf(".") + (i), s.indexOf(".") + (i + 1));
+                var b = Number(n) + 1;
+                var str2 = str.slice(0, str.length - (i - 1));
+                var x = str2 + b;
+                total2 = Number(x);
+            } else {
+                total2 = Number(str);
+            }
+        } else {
+
+            var n2 = s.substring(s.indexOf(".") + (i + 1), s.indexOf(".") + (i + 2));
+            if (n2 >= 5) {
+                var m = s.substring(s.indexOf(".") + (i), s.indexOf(".") + (i + 1));
+                var m1 = s.substring(0, s.indexOf(".") + (i));
+                var newStr1 = m1 + (Number(m) + 1);
+                total2 = Number(newStr1);
+            } else {
+                total2 = Number(str);
+            }
+
+        }
+    } else {
+        total2 = num;
+    }
+    return total2;
+}
+    </script>
+
+    
+</head>
+<body>
+    <div>dV<input  id="dv"/>mv</div>
+    <div>dt<input  id="dt"/>us</div>
+    <div>Rs<input  id="rs"/>Ω</div>
+    <div>V<input id="v" onblur = "getValue()"/>V</div>
+    <div>di<span id = "di" class="redColor"></span>A</div>
+    <div>di/dt<span id = "didt"  class="redColor"></span>A/us</div>
+    <div>L<span id = "l1"  class="redColor"></span>uH</div>
+    <div>L<span id = "l2"  class="redColor"></span>mH</div>
+    <div>L<span id = "l3"  class="redColor"></span>H</div>
+    </body>
+</html>
