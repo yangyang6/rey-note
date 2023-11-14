@@ -36,3 +36,22 @@
 
 <strong>政治环境、社会文化、和国家治理和政策</strong>
 提高政治思维能力，完善自上而下的投资研究框架
+
+
+
+2023-10-31
+https://xueqiu.com/4017857893/264071157
+https://finance.sina.cn/2023-09-26/detail-imznywnr5323438.d.html
+http://www.cb.com.cn/index/show/jz/cv/cv132701520/p/s.html
+https://xueqiu.com/3828417086/212971424
+https://mp.weixin.qq.com/s/lNuC-GDocaLOCWTHXBEzpQ
+https://mp.weixin.qq.com/s?__biz=MzU3OTUzODY1OA==&mid=2247484893&idx=1&sn=f625c2afb504c78a468a5e4a93705819&chksm=fd65de50ca125746970acd8abbcd91bc819870a361c725bb7b07fe71f43170b3c5d5831d5fb5&scene=21#wechat_redirect
+https://xueqiu.com/2587343781/263128305?_ugc_source=ugcbaiducard
+https://xueqiu.com/1760673340/264847022?share_type=SinaWeibo&data_type=link&data_model=sd&share_uid=3177893771&scene=1036
+
+
+https://www.jiemian.com/article/1061672.html
+https://xueqiu.com/9491872635/265896336
+https://mp.weixin.qq.com/s?__biz=MjM5OTExNDI1Ng==&mid=2649430796&idx=1&sn=3f0a7147db61a5d3ea60746af9245d81&chksm=bedfd87389a85165bbe61662cdda43811b6ad7bdda7a016bc685377893e356699cd2b1b5d31c&scene=27
+https://xueqiu.com/8680038754/147100649
+https://xueqiu.com/9206536540/264044774
