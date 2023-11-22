@@ -55,3 +55,7 @@ https://xueqiu.com/9491872635/265896336
 https://mp.weixin.qq.com/s?__biz=MjM5OTExNDI1Ng==&mid=2649430796&idx=1&sn=3f0a7147db61a5d3ea60746af9245d81&chksm=bedfd87389a85165bbe61662cdda43811b6ad7bdda7a016bc685377893e356699cd2b1b5d31c&scene=27
 https://xueqiu.com/8680038754/147100649
 https://xueqiu.com/9206536540/264044774
+
+
+2023-11-22
+这一轮中概暴涨暴跌，让我对增长预期、估值、股东回报、企业文化有了直观深刻的理解
