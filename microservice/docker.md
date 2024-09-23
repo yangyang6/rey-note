@@ -121,8 +121,7 @@ docker-compose -f docker-compose.yml  up -d
 
 
 ```
-docker-compose -f docker-compose-pay.yml down
-
+docker-compose -f docker-compose.yml down
 docker-compose -f docker-compose.yml up -d
 ```
 
@@ -135,6 +134,7 @@ uKrx?#5z0B
 
 
 ="db.getCollection('boutique_lesson_fee_schedule').update({_id:'202205-"&T3&"'},{$set:{sxjyCount:"&Y3&",cqCount:"&Z3&",ykyfkCount:"&AA3&",middleCount:"&AB3&",ckbgCount:"&AC3&",pgbdCount:"&AD3&",rearCount:"&AE3&",ydcpCount:"&AF3&",frontFee:"&AR3&",middleFee:"&AS3&",rearFee:"&AT3&",ydcpFee:"&AU3&"}});"
+
 
 
 
